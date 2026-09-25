@@ -1,0 +1,357 @@
+<!DOCTYPE HTML><html lang='fr' dir='ltr' class='firefox firefox152'><meta charset="utf-8" /><meta name="robots" content="noindex,nofollow" /><meta http-equiv="X-UA-Compatible" content="IE=Edge"><style>html{display: none;}</style><link rel="icon" href="favicon.ico" type="image/x-icon" /><link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /><link rel="stylesheet" type="text/css" href="phpmyadmin.css.php?server=1&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee&amp;nocache=6359938586ltr" /><link rel="stylesheet" type="text/css" href="./themes/pmahomme/jquery/jquery-ui-1.9.2.custom.css" /><title>localhost / mysql wampserver | phpMyAdmin 4.1.14</title><script type="text/javascript" src="js/get_scripts.js.php?token=1ba98afe0ca42d2c0b1eb7487edce2ee&scripts[]=jquery/jquery-1.8.3.min.js&scripts[]=ajax.js&scripts[]=keyhandler.js&scripts[]=jquery/jquery-ui-1.9.2.custom.min.js&scripts[]=jquery/jquery.sprintf.js&scripts[]=jquery/jquery.cookie.js&scripts[]=jquery/jquery.mousewheel.js&scripts[]=jquery/jquery.event.drag-2.2.js&scripts[]=jquery/jquery-ui-timepicker-addon.js&scripts[]=jquery/jquery.ba-hashchange-1.3.js&scripts[]=jquery/jquery.debounce-1.0.5.js&scripts[]=jquery/jquery.menuResizer-1.0.js&scripts[]=cross_framing_protection.js&scripts[]=rte.js&scripts[]=tracekit/tracekit.js&scripts[]=error_report.js&scripts[]=doclinks.js&scripts[]=functions.js&scripts[]=navigation.js&scripts[]=indexes.js&scripts[]=common.js&scripts[]=codemirror/lib/codemirror.js&scripts[]=codemirror/mode/sql/sql.js&scripts[]=codemirror/addon/runmode/runmode.js"></script><script type='text/javascript' src='js/messages.php?lang=fr&amp;db=&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee'></script><script type='text/javascript' src='js/get_image.js.php?theme=pmahomme'></script><script type="text/javascript">// <![CDATA[
+PMA_commonParams.setAll({common_query:"token=1ba98afe0ca42d2c0b1eb7487edce2ee",opendb_url:"db_structure.php",safari_browser:"0",querywindow_height:"400",querywindow_width:"600",collation_connection:"utf8mb4_general_ci",lang:"fr",server:"1",table:"",db:"",token:"1ba98afe0ca42d2c0b1eb7487edce2ee",text_dir:"ltr",pma_absolute_uri:"http://localhost/phpmyadmin/",pma_text_default_tab:"Afficher",pma_text_left_default_tab:"Structure",confirm:"1"});
+AJAX.scriptHandler.add("jquery/jquery-1.8.3.min.js",0).add("ajax.js",0).add("keyhandler.js",1).add("jquery/jquery-ui-1.9.2.custom.min.js",0).add("jquery/jquery.sprintf.js",0).add("jquery/jquery.cookie.js",0).add("jquery/jquery.mousewheel.js",0).add("jquery/jquery.event.drag-2.2.js",0).add("jquery/jquery-ui-timepicker-addon.js",0).add("jquery/jquery.ba-hashchange-1.3.js",0).add("jquery/jquery.debounce-1.0.5.js",0).add("jquery/jquery.menuResizer-1.0.js",0).add("cross_framing_protection.js",0).add("rte.js",1).add("tracekit/tracekit.js",1).add("error_report.js",1).add("messages.php?lang=fr&amp;db=&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee",0).add("get_image.js.php?theme=pmahomme",0).add("doclinks.js",1).add("functions.js",1).add("navigation.js",0).add("indexes.js",1).add("common.js",1).add("codemirror/lib/codemirror.js",0).add("codemirror/mode/sql/sql.js",0).add("codemirror/addon/runmode/runmode.js",0);
+$(function() {AJAX.fireOnload("keyhandler.js");AJAX.fireOnload("rte.js");AJAX.fireOnload("tracekit/tracekit.js");AJAX.fireOnload("error_report.js");AJAX.fireOnload("doclinks.js");AJAX.fireOnload("functions.js");AJAX.fireOnload("indexes.js");AJAX.fireOnload("common.js");});
+// ]]></script></head><body><div id="pma_navigation"><div id="pma_navigation_resizer"></div><div id="pma_navigation_collapser"></div><div id="pma_navigation_content"><div id="pma_navigation_header"><a class="hide navigation_url" href="navigation.php?ajax_request=1&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee"></a><!-- LOGO START --><div id="pmalogo">    <a href="index.php?token=1ba98afe0ca42d2c0b1eb7487edce2ee"><img src="./themes/pmahomme/img/logo_left.png" alt="phpMyAdmin" id="imgpmalogo" /></a></div><!-- LOGO END --><!-- LINKS START --><div id="leftframelinks"><a href="index.php?token=1ba98afe0ca42d2c0b1eb7487edce2ee" title="Accueil"><img src="themes/dot.gif" title="Accueil" alt="Accueil" class="icon ic_b_home" /></a><a href="querywindow.php?token=1ba98afe0ca42d2c0b1eb7487edce2ee&amp;no_js=true" id="pma_open_querywindow" class="disableAjax" title="Fenêtre de requête"><img src="themes/dot.gif" title="Fenêtre de requête" alt="Fenêtre de requête" class="icon ic_b_selboard" /></a><a href="./doc/html/index.html" target="documentation" title="Documentation de phpMyAdmin"><img src="themes/dot.gif" title="Documentation de phpMyAdmin" alt="Documentation de phpMyAdmin" class="icon ic_b_docs" /></a><a href="./url.php?url=http%3A%2F%2Fdev.mysql.com%2Fdoc%2Frefman%2F5.6%2Fen%2Findex.html&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee" target="mysql_doc"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_sqlhelp" /></a><a href="#" id="pma_navigation_reload" title="Actualiser le panneau de navigation"><img src="themes/dot.gif" title="Actualiser le panneau de navigation" alt="Actualiser le panneau de navigation" class="icon ic_s_reload" /></a></div><!-- LINKS ENDS --><!-- RECENT START --><div id="recentTableList"><form method="post" action="sql.php"><input type="hidden" name="db" value="" /><input type="hidden" name="table" value="" /><input type="hidden" name="server" value="1" /><input type="hidden" name="token" value="1ba98afe0ca42d2c0b1eb7487edce2ee" /><select name="selected_recent_table" id="recentTable"><option value="">(Tables récentes) ...</option><option value="">Il n'y a pas de tables récentes</option></select></form></div><!-- RECENT END --><img src="./themes/pmahomme/img/ajax_clock_small.gif" title="Chargement en cours…" alt="Chargement en cours…" style="visibility: hidden; display:none" class="throbber" /></div><div id="pma_navigation_tree" class="list_container highlight"><div id='pma_navigation_tree_content'><ul><li class='first new_database italics'><div class='block'><i class='first'></i></div><div class='block'><a href='server_databases.php?server=1&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee'><img src="themes/dot.gif" title="" alt="" class="icon ic_b_newdb" /></a></div><a href='server_databases.php?server=1&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee'>Nouvelle base de données</a></li><li class='database'><div class='block'><i></i><b></b><a class='expander' href='#'><span class='hide aPath'>cm9vdA==.aW5mb3JtYXRpb25fc2NoZW1h</span><span class='hide vPath'>cm9vdA==.aW5mb3JtYXRpb25fc2NoZW1h</span><span class='hide pos'>0</span><img src="themes/dot.gif" title="Développer/réduire" alt="Développer/réduire" class="icon ic_b_plus" /></a></div><div class='block'><a href='db_operations.php?server=1&amp;db=information_schema&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee'><img src="themes/dot.gif" title="Opérations sur base de données" alt="Opérations sur base de données" class="icon ic_s_db" /></a></div><a href='db_structure.php?server=1&amp;db=information_schema&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee'>information_schema</a></li><li class='database'><div class='block'><i></i><b></b><a class='expander' href='#'><span class='hide aPath'>cm9vdA==.bXlzcWw=</span><span class='hide vPath'>cm9vdA==.bXlzcWw=</span><span class='hide pos'>0</span><img src="themes/dot.gif" title="Développer/réduire" alt="Développer/réduire" class="icon ic_b_plus" /></a></div><div class='block'><a href='db_operations.php?server=1&amp;db=mysql&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee'><img src="themes/dot.gif" title="Opérations sur base de données" alt="Opérations sur base de données" class="icon ic_s_db" /></a></div><a href='db_structure.php?server=1&amp;db=mysql&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee'>mysql</a></li><li class='database'><div class='block'><i></i><b></b><a class='expander' href='#'><span class='hide aPath'>cm9vdA==.cGVyZm9ybWFuY2Vfc2NoZW1h</span><span class='hide vPath'>cm9vdA==.cGVyZm9ybWFuY2Vfc2NoZW1h</span><span class='hide pos'>0</span><img src="themes/dot.gif" title="Développer/réduire" alt="Développer/réduire" class="icon ic_b_plus" /></a></div><div class='block'><a href='db_operations.php?server=1&amp;db=performance_schema&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee'><img src="themes/dot.gif" title="Opérations sur base de données" alt="Opérations sur base de données" class="icon ic_s_db" /></a></div><a href='db_structure.php?server=1&amp;db=performance_schema&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee'>performance_schema</a></li><li class='last database'><div class='block'><i></i><a class='expander' href='#'><span class='hide aPath'>cm9vdA==.dGVzdA==</span><span class='hide vPath'>cm9vdA==.dGVzdA==</span><span class='hide pos'>0</span><img src="themes/dot.gif" title="Développer/réduire" alt="Développer/réduire" class="icon ic_b_plus" /></a></div><div class='block'><a href='db_operations.php?server=1&amp;db=test&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee'><img src="themes/dot.gif" title="Opérations sur base de données" alt="Opérations sur base de données" class="icon ic_s_db" /></a></div><a href='db_structure.php?server=1&amp;db=test&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee'>test</a></li></ul></div></div></div></div><noscript><div class="error"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_error" /> Javascript doit être activé</div></noscript><div id='floating_menubar'></div><div id='serverinfo'><img src="themes/dot.gif" title="" alt="" class="icon ic_s_host item" /><a href="index.php?token=1ba98afe0ca42d2c0b1eb7487edce2ee" class="item">Serveur: mysql wampserver</a><div class="clearfloat"></div></div><div id="topmenucontainer" class="menucontainer"><ul id="topmenu"  class="resizable-menu"><li><a class="tab" href="server_databases.php?db=&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee" ><img src="themes/dot.gif" title="Bases de données" alt="Bases de données" class="icon ic_s_db" /> Bases de données</a></li><li><a class="tab" href="server_sql.php?db=&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee" ><img src="themes/dot.gif" title="SQL" alt="SQL" class="icon ic_b_sql" /> SQL</a></li><li><a class="tab" href="server_status.php?db=&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee" ><img src="themes/dot.gif" title="État" alt="État" class="icon ic_s_status" /> État</a></li><li><a class="tab" href="server_privileges.php?db=&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee&amp;viewing_mode=server" ><img src="themes/dot.gif" title="Utilisateurs" alt="Utilisateurs" class="icon ic_s_rights" /> Utilisateurs</a></li><li><a class="tab" href="server_export.php?db=&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee" ><img src="themes/dot.gif" title="Exporter" alt="Exporter" class="icon ic_b_export" /> Exporter</a></li><li><a class="tab" href="server_import.php?db=&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee" ><img src="themes/dot.gif" title="Importer" alt="Importer" class="icon ic_b_import" /> Importer</a></li><li><a class="tab" href="prefs_manage.php?db=&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee" ><img src="themes/dot.gif" title="Paramètres" alt="Paramètres" class="icon ic_b_tblops" /> Paramètres</a></li><li><a class="tab" href="server_replication.php?db=&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee" ><img src="themes/dot.gif" title="Réplication" alt="Réplication" class="icon ic_s_replication" /> Réplication</a></li><li><a class="tab" href="server_variables.php?db=&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee" ><img src="themes/dot.gif" title="Variables" alt="Variables" class="icon ic_s_vars" /> Variables</a></li><li><a class="tab" href="server_collations.php?db=&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee" ><img src="themes/dot.gif" title="Jeux de caractères" alt="Jeux de caractères" class="icon ic_s_asci" /> Jeux de caractères</a></li><li><a class="tab" href="server_engines.php?db=&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee" ><img src="themes/dot.gif" title="Moteurs" alt="Moteurs" class="icon ic_b_engine" /> Moteurs</a></li></ul>
+<div class="clearfloat"></div></div>
+<a id="goto_pagetop" href="#" title="Cliquez sur la barre pour faire défiler en haut de page"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_top" /></a><div id="page_content"><div id="maincontainer">
+<div id="main_pane_left"><div class="group"><h2>Paramètres généraux</h2><ul>    <li id="li_select_mysql_collation" class="no_bullets" >        <form method="post" action="index.php">
+<input type="hidden" name="token" value="1ba98afe0ca42d2c0b1eb7487edce2ee" />            <label for="select_collation_connection">
+                <img src="themes/dot.gif" title="" alt="" class="icon ic_s_asci" /> Interclassement pour la connexion au serveur
+<a href="./url.php?url=http%3A%2F%2Fdev.mysql.com%2Fdoc%2Frefman%2F5.6%2Fen%2Fcharset-connection.html&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee" target="mysql_doc"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>: 
+            </label>
+<select lang="en" dir="ltr" name="collation_connection" id="select_collation_connection" class="autosubmit">
+<option value="">Interclassement</option>
+<option value=""></option>
+<optgroup label="armscii8" title="ARMSCII-8 Armenian">
+<option value="armscii8_bin" title="Arménien, Binaire">armscii8_bin</option>
+<option value="armscii8_general_ci" title="Arménien, insensible à la casse">armscii8_general_ci</option>
+</optgroup>
+<optgroup label="ascii" title="US ASCII">
+<option value="ascii_bin" title="Europe de l'ouest (multilingue), Binaire">ascii_bin</option>
+<option value="ascii_general_ci" title="Europe de l'ouest (multilingue), insensible à la casse">ascii_general_ci</option>
+</optgroup>
+<optgroup label="big5" title="Big5 Traditional Chinese">
+<option value="big5_bin" title="Chinois traditionnel, Binaire">big5_bin</option>
+<option value="big5_chinese_ci" title="Chinois traditionnel, insensible à la casse">big5_chinese_ci</option>
+</optgroup>
+<optgroup label="binary" title="Binary pseudo charset">
+<option value="binary" title="Binaire">binary</option>
+</optgroup>
+<optgroup label="cp1250" title="Windows Central European">
+<option value="cp1250_bin" title="Europe centrale (multilingue), Binaire">cp1250_bin</option>
+<option value="cp1250_croatian_ci" title="Croate, insensible à la casse">cp1250_croatian_ci</option>
+<option value="cp1250_czech_cs" title="Tchèque, sensible à la casse">cp1250_czech_cs</option>
+<option value="cp1250_general_ci" title="Europe centrale (multilingue), insensible à la casse">cp1250_general_ci</option>
+<option value="cp1250_polish_ci" title="Polonais, insensible à la casse">cp1250_polish_ci</option>
+</optgroup>
+<optgroup label="cp1251" title="Windows Cyrillic">
+<option value="cp1251_bin" title="Cyrillique (multilingue), Binaire">cp1251_bin</option>
+<option value="cp1251_bulgarian_ci" title="Bulgare, insensible à la casse">cp1251_bulgarian_ci</option>
+<option value="cp1251_general_ci" title="Cyrillique (multilingue), insensible à la casse">cp1251_general_ci</option>
+<option value="cp1251_general_cs" title="Cyrillique (multilingue), sensible à la casse">cp1251_general_cs</option>
+<option value="cp1251_ukrainian_ci" title="Ukrainien, insensible à la casse">cp1251_ukrainian_ci</option>
+</optgroup>
+<optgroup label="cp1256" title="Windows Arabic">
+<option value="cp1256_bin" title="Arabe, Binaire">cp1256_bin</option>
+<option value="cp1256_general_ci" title="Arabe, insensible à la casse">cp1256_general_ci</option>
+</optgroup>
+<optgroup label="cp1257" title="Windows Baltic">
+<option value="cp1257_bin" title="Baltique (multilingue), Binaire">cp1257_bin</option>
+<option value="cp1257_general_ci" title="Baltique (multilingue), insensible à la casse">cp1257_general_ci</option>
+<option value="cp1257_lithuanian_ci" title="Lituanien, insensible à la casse">cp1257_lithuanian_ci</option>
+</optgroup>
+<optgroup label="cp850" title="DOS West European">
+<option value="cp850_bin" title="Europe de l'ouest (multilingue), Binaire">cp850_bin</option>
+<option value="cp850_general_ci" title="Europe de l'ouest (multilingue), insensible à la casse">cp850_general_ci</option>
+</optgroup>
+<optgroup label="cp852" title="DOS Central European">
+<option value="cp852_bin" title="Europe centrale (multilingue), Binaire">cp852_bin</option>
+<option value="cp852_general_ci" title="Europe centrale (multilingue), insensible à la casse">cp852_general_ci</option>
+</optgroup>
+<optgroup label="cp866" title="DOS Russian">
+<option value="cp866_bin" title="Russe, Binaire">cp866_bin</option>
+<option value="cp866_general_ci" title="Russe, insensible à la casse">cp866_general_ci</option>
+</optgroup>
+<optgroup label="cp932" title="SJIS for Windows Japanese">
+<option value="cp932_bin" title="Japonais, Binaire">cp932_bin</option>
+<option value="cp932_japanese_ci" title="Japonais, insensible à la casse">cp932_japanese_ci</option>
+</optgroup>
+<optgroup label="dec8" title="DEC West European">
+<option value="dec8_bin" title="Europe de l'ouest (multilingue), Binaire">dec8_bin</option>
+<option value="dec8_swedish_ci" title="Suédois, insensible à la casse">dec8_swedish_ci</option>
+</optgroup>
+<optgroup label="eucjpms" title="UJIS for Windows Japanese">
+<option value="eucjpms_bin" title="Japonais, Binaire">eucjpms_bin</option>
+<option value="eucjpms_japanese_ci" title="Japonais, insensible à la casse">eucjpms_japanese_ci</option>
+</optgroup>
+<optgroup label="euckr" title="EUC-KR Korean">
+<option value="euckr_bin" title="Cor&eacute;en, Binaire">euckr_bin</option>
+<option value="euckr_korean_ci" title="Cor&eacute;en, insensible à la casse">euckr_korean_ci</option>
+</optgroup>
+<optgroup label="gb2312" title="GB2312 Simplified Chinese">
+<option value="gb2312_bin" title="Chinois simplifié, Binaire">gb2312_bin</option>
+<option value="gb2312_chinese_ci" title="Chinois simplifié, insensible à la casse">gb2312_chinese_ci</option>
+</optgroup>
+<optgroup label="gbk" title="GBK Simplified Chinese">
+<option value="gbk_bin" title="Chinois simplifié, Binaire">gbk_bin</option>
+<option value="gbk_chinese_ci" title="Chinois simplifié, insensible à la casse">gbk_chinese_ci</option>
+</optgroup>
+<optgroup label="geostd8" title="GEOSTD8 Georgian">
+<option value="geostd8_bin" title="G&eacute;orgien, Binaire">geostd8_bin</option>
+<option value="geostd8_general_ci" title="G&eacute;orgien, insensible à la casse">geostd8_general_ci</option>
+</optgroup>
+<optgroup label="greek" title="ISO 8859-7 Greek">
+<option value="greek_bin" title="Grec, Binaire">greek_bin</option>
+<option value="greek_general_ci" title="Grec, insensible à la casse">greek_general_ci</option>
+</optgroup>
+<optgroup label="hebrew" title="ISO 8859-8 Hebrew">
+<option value="hebrew_bin" title="H&eacute;breu, Binaire">hebrew_bin</option>
+<option value="hebrew_general_ci" title="H&eacute;breu, insensible à la casse">hebrew_general_ci</option>
+</optgroup>
+<optgroup label="hp8" title="HP West European">
+<option value="hp8_bin" title="Europe de l'ouest (multilingue), Binaire">hp8_bin</option>
+<option value="hp8_english_ci" title="Anglais, insensible à la casse">hp8_english_ci</option>
+</optgroup>
+<optgroup label="keybcs2" title="DOS Kamenicky Czech-Slovak">
+<option value="keybcs2_bin" title="Tchèque-slovaque, Binaire">keybcs2_bin</option>
+<option value="keybcs2_general_ci" title="Tchèque-slovaque, insensible à la casse">keybcs2_general_ci</option>
+</optgroup>
+<optgroup label="koi8r" title="KOI8-R Relcom Russian">
+<option value="koi8r_bin" title="Russe, Binaire">koi8r_bin</option>
+<option value="koi8r_general_ci" title="Russe, insensible à la casse">koi8r_general_ci</option>
+</optgroup>
+<optgroup label="koi8u" title="KOI8-U Ukrainian">
+<option value="koi8u_bin" title="Ukrainien, Binaire">koi8u_bin</option>
+<option value="koi8u_general_ci" title="Ukrainien, insensible à la casse">koi8u_general_ci</option>
+</optgroup>
+<optgroup label="latin1" title="cp1252 West European">
+<option value="latin1_bin" title="Europe de l'ouest (multilingue), Binaire">latin1_bin</option>
+<option value="latin1_danish_ci" title="Danois, insensible à la casse">latin1_danish_ci</option>
+<option value="latin1_general_ci" title="Europe de l'ouest (multilingue), insensible à la casse">latin1_general_ci</option>
+<option value="latin1_general_cs" title="Europe de l'ouest (multilingue), sensible à la casse">latin1_general_cs</option>
+<option value="latin1_german1_ci" title="Allemand (dictionnaire), insensible à la casse">latin1_german1_ci</option>
+<option value="latin1_german2_ci" title="Allemand (annuaire téléphonique), insensible à la casse">latin1_german2_ci</option>
+<option value="latin1_spanish_ci" title="Espagnol, insensible à la casse">latin1_spanish_ci</option>
+<option value="latin1_swedish_ci" title="Suédois, insensible à la casse">latin1_swedish_ci</option>
+</optgroup>
+<optgroup label="latin2" title="ISO 8859-2 Central European">
+<option value="latin2_bin" title="Europe centrale (multilingue), Binaire">latin2_bin</option>
+<option value="latin2_croatian_ci" title="Croate, insensible à la casse">latin2_croatian_ci</option>
+<option value="latin2_czech_cs" title="Tchèque, sensible à la casse">latin2_czech_cs</option>
+<option value="latin2_general_ci" title="Europe centrale (multilingue), insensible à la casse">latin2_general_ci</option>
+<option value="latin2_hungarian_ci" title="Hongrois, insensible à la casse">latin2_hungarian_ci</option>
+</optgroup>
+<optgroup label="latin5" title="ISO 8859-9 Turkish">
+<option value="latin5_bin" title="Turc, Binaire">latin5_bin</option>
+<option value="latin5_turkish_ci" title="Turc, insensible à la casse">latin5_turkish_ci</option>
+</optgroup>
+<optgroup label="latin7" title="ISO 8859-13 Baltic">
+<option value="latin7_bin" title="Baltique (multilingue), Binaire">latin7_bin</option>
+<option value="latin7_estonian_cs" title="Estonien, sensible à la casse">latin7_estonian_cs</option>
+<option value="latin7_general_ci" title="Baltique (multilingue), insensible à la casse">latin7_general_ci</option>
+<option value="latin7_general_cs" title="Baltique (multilingue), sensible à la casse">latin7_general_cs</option>
+</optgroup>
+<optgroup label="macce" title="Mac Central European">
+<option value="macce_bin" title="Europe centrale (multilingue), Binaire">macce_bin</option>
+<option value="macce_general_ci" title="Europe centrale (multilingue), insensible à la casse">macce_general_ci</option>
+</optgroup>
+<optgroup label="macroman" title="Mac West European">
+<option value="macroman_bin" title="Europe de l'ouest (multilingue), Binaire">macroman_bin</option>
+<option value="macroman_general_ci" title="Europe de l'ouest (multilingue), insensible à la casse">macroman_general_ci</option>
+</optgroup>
+<optgroup label="sjis" title="Shift-JIS Japanese">
+<option value="sjis_bin" title="Japonais, Binaire">sjis_bin</option>
+<option value="sjis_japanese_ci" title="Japonais, insensible à la casse">sjis_japanese_ci</option>
+</optgroup>
+<optgroup label="swe7" title="7bit Swedish">
+<option value="swe7_bin" title="Suédois, Binaire">swe7_bin</option>
+<option value="swe7_swedish_ci" title="Suédois, insensible à la casse">swe7_swedish_ci</option>
+</optgroup>
+<optgroup label="tis620" title="TIS620 Thai">
+<option value="tis620_bin" title="Tha&iuml;, Binaire">tis620_bin</option>
+<option value="tis620_thai_ci" title="Tha&iuml;, insensible à la casse">tis620_thai_ci</option>
+</optgroup>
+<optgroup label="ucs2" title="UCS-2 Unicode">
+<option value="ucs2_bin" title="Unicode (multilingue), Binaire">ucs2_bin</option>
+<option value="ucs2_croatian_ci" title="Croate, insensible à la casse">ucs2_croatian_ci</option>
+<option value="ucs2_czech_ci" title="Tchèque, insensible à la casse">ucs2_czech_ci</option>
+<option value="ucs2_danish_ci" title="Danois, insensible à la casse">ucs2_danish_ci</option>
+<option value="ucs2_esperanto_ci" title="Espéranto, insensible à la casse">ucs2_esperanto_ci</option>
+<option value="ucs2_estonian_ci" title="Estonien, insensible à la casse">ucs2_estonian_ci</option>
+<option value="ucs2_general_ci" title="Unicode (multilingue), insensible à la casse">ucs2_general_ci</option>
+<option value="ucs2_general_mysql500_ci" title="Unicode (multilingue)">ucs2_general_mysql500_ci</option>
+<option value="ucs2_german2_ci" title="Allemand (annuaire téléphonique), insensible à la casse">ucs2_german2_ci</option>
+<option value="ucs2_hungarian_ci" title="Hongrois, insensible à la casse">ucs2_hungarian_ci</option>
+<option value="ucs2_icelandic_ci" title="Islandais, insensible à la casse">ucs2_icelandic_ci</option>
+<option value="ucs2_latvian_ci" title="Letton, insensible à la casse">ucs2_latvian_ci</option>
+<option value="ucs2_lithuanian_ci" title="Lituanien, insensible à la casse">ucs2_lithuanian_ci</option>
+<option value="ucs2_persian_ci" title="Farsi, insensible à la casse">ucs2_persian_ci</option>
+<option value="ucs2_polish_ci" title="Polonais, insensible à la casse">ucs2_polish_ci</option>
+<option value="ucs2_roman_ci" title="Europe de l'ouest, insensible à la casse">ucs2_roman_ci</option>
+<option value="ucs2_romanian_ci" title="Roumain, insensible à la casse">ucs2_romanian_ci</option>
+<option value="ucs2_sinhala_ci" title="inconnu, insensible à la casse">ucs2_sinhala_ci</option>
+<option value="ucs2_slovak_ci" title="Slovaque, insensible à la casse">ucs2_slovak_ci</option>
+<option value="ucs2_slovenian_ci" title="Slovène, insensible à la casse">ucs2_slovenian_ci</option>
+<option value="ucs2_spanish2_ci" title="Espagnol traditionnel, insensible à la casse">ucs2_spanish2_ci</option>
+<option value="ucs2_spanish_ci" title="Espagnol, insensible à la casse">ucs2_spanish_ci</option>
+<option value="ucs2_swedish_ci" title="Suédois, insensible à la casse">ucs2_swedish_ci</option>
+<option value="ucs2_turkish_ci" title="Turc, insensible à la casse">ucs2_turkish_ci</option>
+<option value="ucs2_unicode_520_ci" title="Unicode (multilingue)">ucs2_unicode_520_ci</option>
+<option value="ucs2_unicode_ci" title="Unicode (multilingue), insensible à la casse">ucs2_unicode_ci</option>
+<option value="ucs2_vietnamese_ci" title="inconnu, insensible à la casse">ucs2_vietnamese_ci</option>
+</optgroup>
+<optgroup label="ujis" title="EUC-JP Japanese">
+<option value="ujis_bin" title="Japonais, Binaire">ujis_bin</option>
+<option value="ujis_japanese_ci" title="Japonais, insensible à la casse">ujis_japanese_ci</option>
+</optgroup>
+<optgroup label="utf16" title="UTF-16 Unicode">
+<option value="utf16_bin" title="inconnu, Binaire">utf16_bin</option>
+<option value="utf16_croatian_ci" title="Croate, insensible à la casse">utf16_croatian_ci</option>
+<option value="utf16_czech_ci" title="Tchèque, insensible à la casse">utf16_czech_ci</option>
+<option value="utf16_danish_ci" title="Danois, insensible à la casse">utf16_danish_ci</option>
+<option value="utf16_esperanto_ci" title="Espéranto, insensible à la casse">utf16_esperanto_ci</option>
+<option value="utf16_estonian_ci" title="Estonien, insensible à la casse">utf16_estonian_ci</option>
+<option value="utf16_general_ci" title="inconnu, insensible à la casse">utf16_general_ci</option>
+<option value="utf16_german2_ci" title="Allemand (annuaire téléphonique), insensible à la casse">utf16_german2_ci</option>
+<option value="utf16_hungarian_ci" title="Hongrois, insensible à la casse">utf16_hungarian_ci</option>
+<option value="utf16_icelandic_ci" title="Islandais, insensible à la casse">utf16_icelandic_ci</option>
+<option value="utf16_latvian_ci" title="Letton, insensible à la casse">utf16_latvian_ci</option>
+<option value="utf16_lithuanian_ci" title="Lituanien, insensible à la casse">utf16_lithuanian_ci</option>
+<option value="utf16_persian_ci" title="Farsi, insensible à la casse">utf16_persian_ci</option>
+<option value="utf16_polish_ci" title="Polonais, insensible à la casse">utf16_polish_ci</option>
+<option value="utf16_roman_ci" title="Europe de l'ouest, insensible à la casse">utf16_roman_ci</option>
+<option value="utf16_romanian_ci" title="Roumain, insensible à la casse">utf16_romanian_ci</option>
+<option value="utf16_sinhala_ci" title="inconnu, insensible à la casse">utf16_sinhala_ci</option>
+<option value="utf16_slovak_ci" title="Slovaque, insensible à la casse">utf16_slovak_ci</option>
+<option value="utf16_slovenian_ci" title="Slovène, insensible à la casse">utf16_slovenian_ci</option>
+<option value="utf16_spanish2_ci" title="Espagnol traditionnel, insensible à la casse">utf16_spanish2_ci</option>
+<option value="utf16_spanish_ci" title="Espagnol, insensible à la casse">utf16_spanish_ci</option>
+<option value="utf16_swedish_ci" title="Suédois, insensible à la casse">utf16_swedish_ci</option>
+<option value="utf16_turkish_ci" title="Turc, insensible à la casse">utf16_turkish_ci</option>
+<option value="utf16_unicode_520_ci" title="Unicode (multilingue)">utf16_unicode_520_ci</option>
+<option value="utf16_unicode_ci" title="Unicode (multilingue), insensible à la casse">utf16_unicode_ci</option>
+<option value="utf16_vietnamese_ci" title="inconnu, insensible à la casse">utf16_vietnamese_ci</option>
+</optgroup>
+<optgroup label="utf16le" title="UTF-16LE Unicode">
+<option value="utf16le_bin" title="inconnu, Binaire">utf16le_bin</option>
+<option value="utf16le_general_ci" title="inconnu, insensible à la casse">utf16le_general_ci</option>
+</optgroup>
+<optgroup label="utf32" title="UTF-32 Unicode">
+<option value="utf32_bin" title="inconnu, Binaire">utf32_bin</option>
+<option value="utf32_croatian_ci" title="Croate, insensible à la casse">utf32_croatian_ci</option>
+<option value="utf32_czech_ci" title="Tchèque, insensible à la casse">utf32_czech_ci</option>
+<option value="utf32_danish_ci" title="Danois, insensible à la casse">utf32_danish_ci</option>
+<option value="utf32_esperanto_ci" title="Espéranto, insensible à la casse">utf32_esperanto_ci</option>
+<option value="utf32_estonian_ci" title="Estonien, insensible à la casse">utf32_estonian_ci</option>
+<option value="utf32_general_ci" title="inconnu, insensible à la casse">utf32_general_ci</option>
+<option value="utf32_german2_ci" title="Allemand (annuaire téléphonique), insensible à la casse">utf32_german2_ci</option>
+<option value="utf32_hungarian_ci" title="Hongrois, insensible à la casse">utf32_hungarian_ci</option>
+<option value="utf32_icelandic_ci" title="Islandais, insensible à la casse">utf32_icelandic_ci</option>
+<option value="utf32_latvian_ci" title="Letton, insensible à la casse">utf32_latvian_ci</option>
+<option value="utf32_lithuanian_ci" title="Lituanien, insensible à la casse">utf32_lithuanian_ci</option>
+<option value="utf32_persian_ci" title="Farsi, insensible à la casse">utf32_persian_ci</option>
+<option value="utf32_polish_ci" title="Polonais, insensible à la casse">utf32_polish_ci</option>
+<option value="utf32_roman_ci" title="Europe de l'ouest, insensible à la casse">utf32_roman_ci</option>
+<option value="utf32_romanian_ci" title="Roumain, insensible à la casse">utf32_romanian_ci</option>
+<option value="utf32_sinhala_ci" title="inconnu, insensible à la casse">utf32_sinhala_ci</option>
+<option value="utf32_slovak_ci" title="Slovaque, insensible à la casse">utf32_slovak_ci</option>
+<option value="utf32_slovenian_ci" title="Slovène, insensible à la casse">utf32_slovenian_ci</option>
+<option value="utf32_spanish2_ci" title="Espagnol traditionnel, insensible à la casse">utf32_spanish2_ci</option>
+<option value="utf32_spanish_ci" title="Espagnol, insensible à la casse">utf32_spanish_ci</option>
+<option value="utf32_swedish_ci" title="Suédois, insensible à la casse">utf32_swedish_ci</option>
+<option value="utf32_turkish_ci" title="Turc, insensible à la casse">utf32_turkish_ci</option>
+<option value="utf32_unicode_520_ci" title="Unicode (multilingue)">utf32_unicode_520_ci</option>
+<option value="utf32_unicode_ci" title="Unicode (multilingue), insensible à la casse">utf32_unicode_ci</option>
+<option value="utf32_vietnamese_ci" title="inconnu, insensible à la casse">utf32_vietnamese_ci</option>
+</optgroup>
+<optgroup label="utf8" title="UTF-8 Unicode">
+<option value="utf8_bin" title="Unicode (multilingue), Binaire">utf8_bin</option>
+<option value="utf8_croatian_ci" title="Croate, insensible à la casse">utf8_croatian_ci</option>
+<option value="utf8_czech_ci" title="Tchèque, insensible à la casse">utf8_czech_ci</option>
+<option value="utf8_danish_ci" title="Danois, insensible à la casse">utf8_danish_ci</option>
+<option value="utf8_esperanto_ci" title="Espéranto, insensible à la casse">utf8_esperanto_ci</option>
+<option value="utf8_estonian_ci" title="Estonien, insensible à la casse">utf8_estonian_ci</option>
+<option value="utf8_general_ci" title="Unicode (multilingue), insensible à la casse">utf8_general_ci</option>
+<option value="utf8_general_mysql500_ci" title="Unicode (multilingue)">utf8_general_mysql500_ci</option>
+<option value="utf8_german2_ci" title="Allemand (annuaire téléphonique), insensible à la casse">utf8_german2_ci</option>
+<option value="utf8_hungarian_ci" title="Hongrois, insensible à la casse">utf8_hungarian_ci</option>
+<option value="utf8_icelandic_ci" title="Islandais, insensible à la casse">utf8_icelandic_ci</option>
+<option value="utf8_latvian_ci" title="Letton, insensible à la casse">utf8_latvian_ci</option>
+<option value="utf8_lithuanian_ci" title="Lituanien, insensible à la casse">utf8_lithuanian_ci</option>
+<option value="utf8_persian_ci" title="Farsi, insensible à la casse">utf8_persian_ci</option>
+<option value="utf8_polish_ci" title="Polonais, insensible à la casse">utf8_polish_ci</option>
+<option value="utf8_roman_ci" title="Europe de l'ouest, insensible à la casse">utf8_roman_ci</option>
+<option value="utf8_romanian_ci" title="Roumain, insensible à la casse">utf8_romanian_ci</option>
+<option value="utf8_sinhala_ci" title="inconnu, insensible à la casse">utf8_sinhala_ci</option>
+<option value="utf8_slovak_ci" title="Slovaque, insensible à la casse">utf8_slovak_ci</option>
+<option value="utf8_slovenian_ci" title="Slovène, insensible à la casse">utf8_slovenian_ci</option>
+<option value="utf8_spanish2_ci" title="Espagnol traditionnel, insensible à la casse">utf8_spanish2_ci</option>
+<option value="utf8_spanish_ci" title="Espagnol, insensible à la casse">utf8_spanish_ci</option>
+<option value="utf8_swedish_ci" title="Suédois, insensible à la casse">utf8_swedish_ci</option>
+<option value="utf8_turkish_ci" title="Turc, insensible à la casse">utf8_turkish_ci</option>
+<option value="utf8_unicode_520_ci" title="Unicode (multilingue)">utf8_unicode_520_ci</option>
+<option value="utf8_unicode_ci" title="Unicode (multilingue), insensible à la casse">utf8_unicode_ci</option>
+<option value="utf8_vietnamese_ci" title="inconnu, insensible à la casse">utf8_vietnamese_ci</option>
+</optgroup>
+<optgroup label="utf8mb4" title="UTF-8 Unicode">
+<option value="utf8mb4_bin" title="Unicode (multilingue), Binaire">utf8mb4_bin</option>
+<option value="utf8mb4_croatian_ci" title="Croate, insensible à la casse">utf8mb4_croatian_ci</option>
+<option value="utf8mb4_czech_ci" title="Tchèque, insensible à la casse">utf8mb4_czech_ci</option>
+<option value="utf8mb4_danish_ci" title="Danois, insensible à la casse">utf8mb4_danish_ci</option>
+<option value="utf8mb4_esperanto_ci" title="Espéranto, insensible à la casse">utf8mb4_esperanto_ci</option>
+<option value="utf8mb4_estonian_ci" title="Estonien, insensible à la casse">utf8mb4_estonian_ci</option>
+<option value="utf8mb4_general_ci" title="Unicode (multilingue), insensible à la casse" selected="selected">utf8mb4_general_ci</option>
+<option value="utf8mb4_german2_ci" title="Allemand (annuaire téléphonique), insensible à la casse">utf8mb4_german2_ci</option>
+<option value="utf8mb4_hungarian_ci" title="Hongrois, insensible à la casse">utf8mb4_hungarian_ci</option>
+<option value="utf8mb4_icelandic_ci" title="Islandais, insensible à la casse">utf8mb4_icelandic_ci</option>
+<option value="utf8mb4_latvian_ci" title="Letton, insensible à la casse">utf8mb4_latvian_ci</option>
+<option value="utf8mb4_lithuanian_ci" title="Lituanien, insensible à la casse">utf8mb4_lithuanian_ci</option>
+<option value="utf8mb4_persian_ci" title="Farsi, insensible à la casse">utf8mb4_persian_ci</option>
+<option value="utf8mb4_polish_ci" title="Polonais, insensible à la casse">utf8mb4_polish_ci</option>
+<option value="utf8mb4_roman_ci" title="Europe de l'ouest, insensible à la casse">utf8mb4_roman_ci</option>
+<option value="utf8mb4_romanian_ci" title="Roumain, insensible à la casse">utf8mb4_romanian_ci</option>
+<option value="utf8mb4_sinhala_ci" title="inconnu, insensible à la casse">utf8mb4_sinhala_ci</option>
+<option value="utf8mb4_slovak_ci" title="Slovaque, insensible à la casse">utf8mb4_slovak_ci</option>
+<option value="utf8mb4_slovenian_ci" title="Slovène, insensible à la casse">utf8mb4_slovenian_ci</option>
+<option value="utf8mb4_spanish2_ci" title="Espagnol traditionnel, insensible à la casse">utf8mb4_spanish2_ci</option>
+<option value="utf8mb4_spanish_ci" title="Espagnol, insensible à la casse">utf8mb4_spanish_ci</option>
+<option value="utf8mb4_swedish_ci" title="Suédois, insensible à la casse">utf8mb4_swedish_ci</option>
+<option value="utf8mb4_turkish_ci" title="Turc, insensible à la casse">utf8mb4_turkish_ci</option>
+<option value="utf8mb4_unicode_520_ci" title="Unicode (multilingue)">utf8mb4_unicode_520_ci</option>
+<option value="utf8mb4_unicode_ci" title="Unicode (multilingue), insensible à la casse">utf8mb4_unicode_ci</option>
+<option value="utf8mb4_vietnamese_ci" title="inconnu, insensible à la casse">utf8mb4_vietnamese_ci</option>
+</optgroup>
+</select>
+        </form>
+    </li>
+</ul></div><div class="group"><h2>Paramètres d'affichage</h2>  <ul><li id="li_select_lang" class="no_bullets"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_lang" /> <form method="get" action="index.php" class="disableAjax"><input type="hidden" name="db" value="" /><input type="hidden" name="table" value="" /><input type="hidden" name="token" value="1ba98afe0ca42d2c0b1eb7487edce2ee" /><bdo lang="en" dir="ltr"><label for="sel-lang">Langue - <em>Language</em><a href="./doc/html/faq.html#faq7-2" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a>: </label></bdo><select name="lang" class="autosubmit" lang="en" dir="ltr" id="sel-lang"><option value="ar">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577; - Arabic</option><option value="bg">&#1041;&#1098;&#1083;&#1075;&#1072;&#1088;&#1089;&#1082;&#1080; - Bulgarian</option><option value="bn">বাংলা - Bangla</option><option value="ca">Catal&agrave; - Catalan</option><option value="cs">Čeština - Czech</option><option value="da">Dansk - Danish</option><option value="de">Deutsch - German</option><option value="el">&Epsilon;&lambda;&lambda;&eta;&nu;&iota;&kappa;&#940; - Greek</option><option value="en">English</option><option value="en_GB">English (United Kingdom)</option><option value="es">Espa&ntilde;ol - Spanish</option><option value="et">Eesti - Estonian</option><option value="fi">Suomi - Finnish</option><option value="fr" selected="selected">Fran&ccedil;ais - French</option><option value="gl">Galego - Galician</option><option value="hi">&#2361;&#2367;&#2344;&#2381;&#2342;&#2368; - Hindi</option><option value="hu">Magyar - Hungarian</option><option value="ia">Interlingua - Interlingua</option><option value="id">Bahasa Indonesia - Indonesian</option><option value="it">Italiano - Italian</option><option value="ja">&#26085;&#26412;&#35486; - Japanese</option><option value="ko">&#54620;&#44397;&#50612; - Korean</option><option value="lt">Lietuvi&#371; - Lithuanian</option><option value="nb">Norsk - Norwegian</option><option value="nl">Nederlands - Dutch</option><option value="pl">Polski - Polish</option><option value="pt">Portugu&ecirc;s - Portuguese</option><option value="pt_BR">Portugu&ecirc;s - Brazilian portuguese</option><option value="ro">Rom&acirc;n&#259; - Romanian</option><option value="ru">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081; - Russian</option><option value="si">&#3523;&#3538;&#3458;&#3524;&#3517; - Sinhala</option><option value="sk">Sloven&#269;ina - Slovak</option><option value="sl">Sloven&scaron;&#269;ina - Slovenian</option><option value="sr@latin">Srpski - Serbian latin</option><option value="sv">Svenska - Swedish</option><option value="th">&#3616;&#3634;&#3625;&#3634;&#3652;&#3607;&#3618; - Thai</option><option value="tr">T&uuml;rk&ccedil;e - Turkish</option><option value="uk">&#1059;&#1082;&#1088;&#1072;&#1111;&#1085;&#1089;&#1100;&#1082;&#1072; - Ukrainian</option><option value="uz">&#1038;&#1079;&#1073;&#1077;&#1082;&#1095;&#1072; - Uzbek-cyrillic</option><option value="uz@latin">O&lsquo;zbekcha - Uzbek-latin</option><option value="zh_CN">&#20013;&#25991; - Chinese simplified</option><option value="zh_TW">&#20013;&#25991; - Chinese traditional</option></select></form></li><li id="li_select_theme" class="no_bullets"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_theme" /> <form name="setTheme" method="get" action="index.php" class="disableAjax"><input type="hidden" name="token" value="1ba98afe0ca42d2c0b1eb7487edce2ee" /><a href="./themes.php" target="themes" class="themeselect">Thème : </a>
+<select name="set_theme" lang="en" dir="ltr" class="autosubmit"><option value="original">Original</option><option value="pmahomme" selected="selected">pmahomme</option></select></form></li><li id="li_select_fontsize"><form name="form_fontsize_selection" id="form_fontsize_selection" method="get" action="index.php" class="disableAjax">
+<input type="hidden" name="token" value="1ba98afe0ca42d2c0b1eb7487edce2ee" />
+<label for="select_fontsize">Taille du texte:</label>
+<select name="set_fontsize" id="select_fontsize" class="autosubmit">
+<option value="32%">32%</option>
+<option value="42%">42%</option>
+<option value="52%">52%</option>
+<option value="62%">62%</option>
+<option value="72%">72%</option>
+<option value="77%">77%</option>
+<option value="78%">78%</option>
+<option value="79%">79%</option>
+<option value="80%">80%</option>
+<option value="81%">81%</option>
+<option value="82%" selected="selected">82%</option>
+<option value="83%">83%</option>
+<option value="84%">84%</option>
+<option value="85%">85%</option>
+<option value="86%">86%</option>
+<option value="87%">87%</option>
+<option value="92%">92%</option>
+<option value="102%">102%</option>
+<option value="112%">112%</option>
+<option value="122%">122%</option>
+<option value="132%">132%</option>
+</select>
+</form></li></ul><ul><li id="li_user_preferences" class="no_bullets"><a href="prefs_manage.php?token=1ba98afe0ca42d2c0b1eb7487edce2ee"><img src="themes/dot.gif" title="" alt="" class="icon ic_b_tblops" /> Plus de paramètres</a>
+</li></ul></div></div><div id="main_pane_right"><div class="group"><h2>Serveur de base de données</h2><ul>
+<li id="li_server_info">Serveur :  mysql wampserver (127.0.0.1 via TCP/IP)</li><li id="li_server_type">Type de serveur :  MySQL</li><li id="li_server_version">Version du serveur :  5.6.17 - MySQL Community Server (GPL)</li><li id="li_mysql_proto">Version du protocole :  10</li><li id="li_user_info">Utilisateur :  root@localhost</li>    <li id="li_select_mysql_charset">        Jeu de caractères du serveur :          <span lang="en" dir="ltr">           UTF-8 Unicode           (utf8)        </span>    </li>  </ul> </div><div class="group"><h2>Serveur web</h2><ul><li id="li_web_server_software">Apache/2.4.9 (Win64) PHP/5.5.12</li><li id="li_mysql_client_version">Version du client de base de données :  libmysql - mysqlnd 5.0.11-dev - 20120503 - $Id: bf9ad53b11c9a57efdb1057292d73b928b8c5c77 $</li><li id="li_used_php_extension">Extension PHP :  mysqli <a href="./url.php?url=http%3A%2F%2Fphp.net%2Fmanual%2Ffr%2Fbook.mysqli.php&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help" /></a></li>  </ul> </div><div class="group pmagroup"><h2>phpMyAdmin</h2><ul><li id="li_pma_version" class="jsversioncheck">Version :  4.1.14</li><li id="li_pma_docs"><a href="./doc/html/index.html" target="_blank">Documentation</a>
+</li><li id="li_pma_wiki"><a href="./url.php?url=http%3A%2F%2Fwiki.phpmyadmin.net%2F&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee" target="_blank">Wiki</a>
+</li><li id="li_pma_homepage"><a href="./url.php?url=http%3A%2F%2Fwww.phpMyAdmin.net%2F&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee" target="_blank">Site officiel</a>
+</li><li id="li_pma_contribute"><a href="./url.php?url=http%3A%2F%2Fwww.phpmyadmin.net%2Fhome_page%2Fimprove.php&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee" target="_blank">Contribuer</a>
+</li><li id="li_pma_support"><a href="./url.php?url=http%3A%2F%2Fwww.phpmyadmin.net%2Fhome_page%2Fsupport.php&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee" target="_blank">Obtenir de l'aide</a>
+</li><li id="li_pma_changes"><a href="changelog.php" target="_blank">Liste des changements</a>
+</li>    </ul> </div></div></div></div><div id="selflink" class="print_ignore"><a href="index.php?db=&amp;table=&amp;server=1&amp;target=&amp;token=1ba98afe0ca42d2c0b1eb7487edce2ee" title="Ouvrir une nouvelle fenêtre phpMyAdmin" target="_blank"><img src="themes/dot.gif" title="Ouvrir une nouvelle fenêtre phpMyAdmin" alt="Ouvrir une nouvelle fenêtre phpMyAdmin" class="icon ic_window-new" /></a></div><div class="clearfloat" id="pma_errors"><div class="error"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_error" /> Votre fichier de configuration fait référence à l'utilisateur «root » sans mot de passe, ce qui correspond à la valeur par défaut de MySQL. Votre serveur MySQL est donc ouvert aux intrusions, et vous devriez corriger ce problème de sécurité.</div></div><script type="text/javascript">// <![CDATA[
+AJAX.cache.primer = { url: "index.php?db=&table=&server=1&target=&token=1ba98afe0ca42d2c0b1eb7487edce2ee", scripts: [{"name":"jquery\/jquery-1.8.3.min.js","fire":0},{"name":"ajax.js","fire":0},{"name":"keyhandler.js","fire":1},{"name":"jquery\/jquery-ui-1.9.2.custom.min.js","fire":0},{"name":"jquery\/jquery.sprintf.js","fire":0},{"name":"jquery\/jquery.cookie.js","fire":0},{"name":"jquery\/jquery.mousewheel.js","fire":0},{"name":"jquery\/jquery.event.drag-2.2.js","fire":0},{"name":"jquery\/jquery-ui-timepicker-addon.js","fire":0},{"name":"jquery\/jquery.ba-hashchange-1.3.js","fire":0},{"name":"jquery\/jquery.debounce-1.0.5.js","fire":0},{"name":"jquery\/jquery.menuResizer-1.0.js","fire":0},{"name":"cross_framing_protection.js","fire":0},{"name":"rte.js","fire":1},{"name":"tracekit\/tracekit.js","fire":1},{"name":"error_report.js","fire":1},{"name":"doclinks.js","fire":1},{"name":"functions.js","fire":1},{"name":"navigation.js","fire":0},{"name":"indexes.js","fire":1},{"name":"common.js","fire":1},{"name":"codemirror\/lib\/codemirror.js","fire":0},{"name":"codemirror\/mode\/sql\/sql.js","fire":0},{"name":"codemirror\/addon\/runmode\/runmode.js","fire":0}], menuHash: "4420b706"};
+AJAX.scriptHandler;
+$(function() {});
+// ]]></script></body></html>
